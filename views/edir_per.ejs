@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>CRUD</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+    <nav class="navbar navbar-dark">      
+      </nav>            
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+              </li>                               
+            </ul>            
+          </div>
+        </div>
+      </nav>
+
+      <% if () { %>
+      <div class="container mt-4">     
+            <div class="card border-secondary">  
+                <div class="card-header">EDITAR Registro de Persona</div>
+                <div class="card-body">
+
+                    <form action="/update_per" method="POST">
+                        <input id="ID_PER" name="ID_PER" value="<% pru_personas.ID_PER %>" hidden>
+                        <div class="mb-3">
+
+                        <div class="mb-3">
+                        <label for="PER_P_NOM" class="form-label">PRIMER NOMBRE</label>
+                        <input type="text" class="form-control" id="PER_P_NOM" name="PER_P_NOM" tabindex="1" value="<% pru_personas.PER_P_NOM %>" >
+                        </div> 
+                        <div class="mb-3">
+                            <label for="PER_S_NOM" class="form-label">SEGUNDO NOMBRE</label>
+                            <input type="text" class="form-control" id="PER_S_NOM" name="PER_S_NOM"  tabindex="1" value="<% pru_personas.PER_S_NOM %>" >
+                            </div>
+                        <div class="mb-3">
+                                <label for="PER_T_NOM" class="form-label">TERCER NOMBRE</label>
+                                <input type="text" class="form-control" id="PER_T_NOM" name="PER_T_NOM" tabindex="1" value="<% pru_personas.PER_T_NOM %>" >
+                                </div> 
+                        <div class="mb-3">
+                                    <label for="PER_P_APE" class="form-label">PRIMER APELLIDO</label>
+                                    <input type="text" class="form-control" id="PER_P_APE" name="PER_P_APE" tabindex="1" value="<% pru_personas.PER_P_APE %>" >
+                                    </div>  
+                        <div class="mb-3">
+                                        <label for="PER_S_APE" class="form-label">SEGUNDO APELLIDO</label>
+                                        <input type="text" class="form-control" id="PER_S_APE" name="PER_S_APE" tabindex="1" value="<% pru_personas.PER_S_APE %>" >
+                                        </div>
+                        <div class="mb-3">
+                                            <label for="PER_C_APE" class="form-label">APELLIDO de CASADA</label>
+                                            <input type="text" class="form-control" id="PER_C_APE" name="PER_C_APE"  tabindex="1" value="<% pru_personas.PER_C_APE %>">
+                                            </div> 
+                        <div class="mb-3">
+                                                <label for="PER_DIR" class="form-label">DIRECCION</label>
+                                                <input type="text" class="form-control" id="PER_DIR" name="PER_DIR" tabindex="1" value="<% pru_personas.PER_DIR %>" >
+                                                </div>   
+                        <div class="mb-3">
+                                                    <label for="PER_USU" class="form-label">USUARIO</label>
+                                                    <input type="text" class="form-control" id="PER_USU" name="PER_USU" tabindex="1" value="<% pru_personas.PER_USU %>">
+                                                    </div> 
+                        <div class="mb-3">
+                                      <label for="PER_CON" class="form-label">CONTRASEÑA</label>
+                                       <input type="text" class="form-control" id="PER_CON" name="PER_CON" tabindex="1" value="<% pru_personas.PER_CON %>" >
+                                                        </div> 
+                        <div class="mb-3">
+                                             <label for="PER_TEL" class="form-label">TELEFONO</label>
+                                            <input type="text" class="form-control" id="PER_TEL" name="PER_TEL" tabindex="1" value="<% pru_personas.PER_TEL %>" >
+                                                </div>                               
+                        <button type="submit" class="btn btn-primary" tabindex="5">Guardar</button>
+                        <a href="/" class="btn btn-secondary">Cancelar</a>
+                    </form>
+                </div>
+            </div>        
+      </div>
+      <% } %>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
